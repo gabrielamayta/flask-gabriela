@@ -22,3 +22,6 @@ def detalle(id):
     resultado = base_de_datos.execute(consulta)
     lista_de_resultado = resultado.fetchall()
     return render_template("genero/genero.html",generos=lista_de_resultado)
+
+from flask import Blueprint, render_template
+from . import db
