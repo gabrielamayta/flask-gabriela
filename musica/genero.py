@@ -29,5 +29,5 @@ def detalle(id):
     lista_de_resultado = resultado.fetchone()
     resul_detalle = base_de_datos.execute(consulta2)
     lista_generos = resul_detalle.fetchall()
-    return render_template("genero/genero.html",generos=lista_de_resultado, 
+    return render_template("genero.html",generos=lista_de_resultado, 
                            detalle=lista_generos)

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Albums</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>albums</h1>
+    <ul>
+      {% for a in Albums %}
+      <li>{{ a['Title'] }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
