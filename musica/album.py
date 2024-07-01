@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from . import db
-bp = Blueprint('album.html', __name__,url_prefix='/album' )
+bp = Blueprint('album', __name__,url_prefix='/album' )
 
 @bp.route('/')
 def albums():

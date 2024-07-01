@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lista de Albums</title>
+    <title>Lista de Generos</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -9,10 +9,12 @@
     />
   </head>
   <body>
-    <h1>albums</h1>
+    <h1>Generos</h1>
     <ul>
-      {% for a in Albums %}
-      <li>{{ a['Title'] }}</li>
+      {% for ge in generos %}
+      <li>
+        <a href="{{ url_for('genero.detGeneros', filename='style.css') }}"/li>
+      <li>{{ ge['name'] }}</a>
       {% endfor %}
     </ul>
   </body>

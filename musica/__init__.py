@@ -12,4 +12,4 @@ app.register_blueprint(genero.bp)
 
 
 from . import album
-app.register_blueprint(album.bp)
+app.register_blueprint(album.bp) 
