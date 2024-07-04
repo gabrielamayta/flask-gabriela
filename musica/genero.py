@@ -7,17 +7,17 @@ bp = Blueprint('genero', __name__,url_prefix='/genero' )
 def genero():
     base_de_datos = db.get_db()
     consulta = """
-        SELECT name FROM genres
+        SELECT name, genreId FROM genres
         ORDER by name;
     """
     resultado = base_de_datos.execute(consulta)
     lista_de_resultado = resultado.fetchall()
     return render_template("generos.html",generos=lista_de_resultado)
 
-@bp.route('detalle'/'<int:id>')
+@bp.route('/detalle/<int:id>')
 def detGenero(id):
     base_de_datos = db.get_db()
-    consulta = """
+    consulta1 = """
         SELECT name FROM genres
         WHERE GenreId = ?
     """
