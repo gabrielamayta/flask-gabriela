@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lista de Generos</title>
+    <title>Genero:</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -9,11 +9,23 @@
     />
   </head>
   <body>
-    <h1>Generos{{genero['name']}}</h1>
+    <h1>Genero {{genero['name']}}</h1>
     <ul>
-      {% for t in musica %}
+      {% for t in canciones %}
       <li>{{ t['name'] }}</li>
       {% endfor %}
     </ul>
   </body>
 </html>
+</head>
+<body>
+    <main>
+      <h1>Genero {{genero['name']}}</h1>
+      <table class="content-table"></table>
+      <thead>
+        <tr>
+          <th>Genero</th>
+        </tr>
+      </thead>
+    </main>
+</body>
